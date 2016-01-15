@@ -6,6 +6,7 @@ import java.util.Date;
 
 import io.ribot.app.util.DateUtil;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class DateUtilTest {
@@ -17,6 +18,6 @@ public class DateUtilTest {
 
     @Test
     public void isTodayFalse() {
-        assertTrue(DateUtil.isToday(new Date().getTime() - 24 * 60 * 60 * 100));
+        assertFalse(DateUtil.isToday(new Date().getTime() - 24 * 60 * 60 * 100));
     }
 }
