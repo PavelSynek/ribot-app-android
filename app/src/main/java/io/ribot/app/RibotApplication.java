@@ -2,6 +2,7 @@ package io.ribot.app;
 
 import android.app.Application;
 import android.content.Context;
+import android.support.annotation.VisibleForTesting;
 
 import com.squareup.otto.Bus;
 import com.squareup.otto.Subscribe;
@@ -47,6 +48,7 @@ public class RibotApplication extends Application {
     }
 
     // Needed to replace the component with a test specific one
+    @VisibleForTesting
     public void setComponent(ApplicationComponent applicationComponent) {
         mApplicationComponent = applicationComponent;
     }
